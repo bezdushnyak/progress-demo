@@ -24,7 +24,7 @@ function createLoader(loadFn) {
 }
 
 function* loadProgressWatcher(chan) {
-    while (true) { // eslint-disable-line no-constant-condition
+    while (true) {
         const progress = yield take(chan);
         yield put(loadRandomCatImageProgress(progress));
     }
